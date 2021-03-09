@@ -61,7 +61,7 @@ ledge.body.immovable = true;
 
 			stars.enableBody = true;
 
-			for (var i =0; i < 12, ++1){
+			for (var i =0; i < 12; ++1){
 
 				vad star = stars.create(1 * 70, 0, 'star');
 
