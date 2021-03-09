@@ -161,4 +161,65 @@ funtion update(){
 		// TODO: collectstar, loseLife, moveEnemy, endGame
 	
  }
+ 
+ function collectStar(player,star){
+ 	score += 1; 
 
+ 	scoretext.setText(score); 
+
+ 	star.kill();
+
+ 	star.reset(Math.floor(Math.random() * 750), 0);
+}
+ function loseLife(player,enemy){
+ 	life -= 1; 
+
+ 	lifetext.setText(life); 
+
+ 	enemy.kill();
+	
+	enemy.reset(10,20)
+
+
+
+
+ }
+
+ function moveEnemy(){
+
+ 	if(enemy1.x > 759){
+		enemy1.animations.play('left');
+
+		enemy1.body.velocity.x = -120; 
+
+	}
+
+ 	else if(enemy1. < 405 ){
+ 		enemy1.animations.play('right');
+
+ 			enemy1.body.velocity.x = 120; 
+ 	}
+ }
+
+ function endGame(){
+ 	player.kill();
+
+ 	scorelabel.text = "Game over! You lost. Too bad too sad :(" + score + "points";
+
+ 	scoretext.visible = false; 
+
+ 	lifelabel.visible = false; 
+
+ 	lifetext.visible = false; 
+
+
+}
+
+
+
+
+
+
+
+ 
+ 
